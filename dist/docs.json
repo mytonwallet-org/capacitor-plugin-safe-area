@@ -1,0 +1,185 @@
+{
+  "api": {
+    "name": "SafeAreaPlugin",
+    "slug": "safeareaplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "getSafeAreaInsets",
+        "signature": "() => Promise<SafeAreaInsets>",
+        "parameters": [],
+        "returns": "Promise<SafeAreaInsets>",
+        "tags": [],
+        "docs": "Get mobile SafeArea info",
+        "complexTypes": [
+          "SafeAreaInsets"
+        ],
+        "slug": "getsafeareainsets"
+      },
+      {
+        "name": "getStatusBarHeight",
+        "signature": "() => Promise<StatusBarInfo>",
+        "parameters": [],
+        "returns": "Promise<StatusBarInfo>",
+        "tags": [],
+        "docs": "Get mobile statusbar height",
+        "complexTypes": [
+          "StatusBarInfo"
+        ],
+        "slug": "getstatusbarheight"
+      },
+      {
+        "name": "setImmersiveNavigationBar",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Set navigation bar immersive on Android , not implemented on IOS",
+        "complexTypes": [],
+        "slug": "setimmersivenavigationbar"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'safeAreaChanged', listenerFunc: (data: SafeAreaInsets) => void) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'safeAreaChanged'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(data: SafeAreaInsets) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [
+          {
+            "name": "param",
+            "text": "event"
+          },
+          {
+            "name": "param",
+            "text": "listenerFunc"
+          }
+        ],
+        "docs": "Event listener when safe-area changed",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "SafeAreaInsets"
+        ],
+        "slug": "addlistenersafeareachanged"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "deprecated",
+            "text": "use `SafeArea.removeAllListeners()` instead"
+          }
+        ],
+        "docs": "Capacitor plugin method to remove all created listeners",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "SafeAreaInsets",
+      "slug": "safeareainsets",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "insets",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "SafeArea"
+          ],
+          "type": "SafeArea"
+        }
+      ]
+    },
+    {
+      "name": "SafeArea",
+      "slug": "safearea",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "top",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "right",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "bottom",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "left",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "StatusBarInfo",
+      "slug": "statusbarinfo",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "statusBarHeight",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
